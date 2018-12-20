@@ -21,6 +21,7 @@ def call(body) {
 
         baStage('Unit tests') {
                 ut.parse()
+                selftest()
         }
 
         baStage("Build&Test"){
@@ -31,4 +32,8 @@ def call(body) {
                 echo "Publish artifacts..."
                 echo FileHelper.hello('Jiang')
         }
+}
+
+def selftest() {
+        echo "this is a selftest"
 }
