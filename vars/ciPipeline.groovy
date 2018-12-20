@@ -33,17 +33,21 @@ def call(body) {
 
         baStage("Show ENV") {
                 echo env.getEnvironment().toString()
-                echo binding.variables.toString()
 
                 echo "Git SCM"
-                echo gitUrl
-                echo component
-                echo scmFullComponentName
-                echo scmOrgName
+                echo "gitUrl=$gitUrl"
+                echo "component=$component"
+                echo "scmFullComponentName=$scmFullComponentName}
+                echo "scmOrgName=$scmOrgName"
         }
 
         baStage("Checkout"){
                 echo "Checkout source code..."
+                dir("${component}") {
+                        retry(1) {
+                                checkout jobScm
+                        }
+                }
         }
 
         baStage('Unit tests') {
