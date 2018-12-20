@@ -19,6 +19,10 @@ def call(body) {
                 echo "Checkout source code..."
         }
 
+        baStage('Unit tests') {
+                parse()
+        }
+
         baStage("Build&Test"){
                 echo "Build package..."
         }

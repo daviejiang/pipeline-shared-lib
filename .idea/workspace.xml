@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5241cbc9-2b0f-4928-ac3b-447df2310150" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vars/baStage.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vars/ut.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vars/ciPipeline.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/vars/ciPipeline.groovy" afterDir="false" />
     </list>
@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vars/ciPipeline.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+            <state relative-caret-position="506">
+              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -27,11 +27,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vars/baStage.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            <state relative-caret-position="437">
+              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vars/ut.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -58,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/qa/FileHelper.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="483">
+              <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
               <folding>
                 <element signature="e#24#62#0" expanded="true" />
               </folding>
@@ -77,6 +86,7 @@
       <list>
         <option value="$PROJECT_DIR$/vars/cdPipeline.groovy" />
         <option value="$PROJECT_DIR$/vars/baStage.groovy" />
+        <option value="$PROJECT_DIR$/vars/ut.groovy" />
         <option value="$PROJECT_DIR$/vars/ciPipeline.groovy" />
       </list>
     </option>
@@ -106,6 +116,17 @@
             <path>
               <item name="pipeline-shared-lib" type="b2602c69:ProjectViewProjectNode" />
               <item name="pipeline-shared-lib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pipeline-shared-lib" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pipeline-shared-lib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="qa" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pipeline-shared-lib" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pipeline-shared-lib" type="462c0819:PsiDirectoryNode" />
               <item name="vars" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -116,7 +137,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545293077677" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545294557590" />
     <property name="last_opened_file_path" value="D:/work/github/bijie/qa-cicd" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
@@ -159,7 +180,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22334754" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14872068" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
@@ -190,8 +211,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/qa/FileHelper.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="483">
+          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
           <folding>
             <element signature="e#24#62#0" expanded="true" />
           </folding>
@@ -207,18 +228,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vars/baStage.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        <state relative-caret-position="437">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vars/ut.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vars/ciPipeline.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+        <state relative-caret-position="506">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
         </state>
       </provider>
     </entry>
