@@ -1,4 +1,6 @@
 import com.example.qa.FileHelper
+import com.example.qa.ComponentScmInfo
+import com.example.qa.ResolveComponentFromGitScm
 
 /**
  * ci pipeline serves as pre-commit jobs and release jobs
@@ -12,9 +14,6 @@ def call(body) {
         body.delegate = config
         body()
 
-        // Job configure
-        properties = []
-
         // Context are mostly from env
         def final envBranchName = env.'BRANCH_NAME' ?: ''
         // this is e.g 'master' for a CI build, but 'PR-18' for a PR build
@@ -23,9 +22,24 @@ def call(body) {
 
         boolean isPR = (envBranchName.startsWith('PR-'))
 
+        def final jobScm = config.jobScm ?: scm
+        scm = jobScm
+
+        ComponentScmInfo componentScmInfo = ResolveComponentFromGitScm.parse(jobScm)
+        def final gitUrl = componentScmInfo.githubUrl // jobScm.getUserRemoteConfigs()[0].getUrl()
+        def final component = config.component ?: componentScmInfo.component
+        def final scmFullComponentName = componentScmInfo.fullComponentName
+        def final scmOrgName = componentScmInfo.githubOrg
+
         baStage("Show ENV") {
                 echo env.getEnvironment().toString()
                 echo binding.variables.toString()
+
+                echo "Git SCM"
+                echo gitUrl
+                echo component
+                echo scmFullComponentName
+                echo scmOrgName
         }
 
         baStage("Checkout"){
