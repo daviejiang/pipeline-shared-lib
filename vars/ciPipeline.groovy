@@ -47,6 +47,8 @@ def call(body) {
                         dir("${component}") {
                                 retry(1) {
                                         checkout jobScm
+                                        bat '''echo %cd%
+'''
                                 }
                         }
                 }
