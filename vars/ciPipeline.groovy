@@ -21,7 +21,7 @@ def call(body) {
 
         baStage('Unit tests') {
                 ut.parse()
-                selftest()
+                this.selftest()
         }
 
         baStage("Build&Test"){
