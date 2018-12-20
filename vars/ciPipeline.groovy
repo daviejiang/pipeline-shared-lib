@@ -12,15 +12,25 @@ def call(body) {
         body.delegate = config
         body()
 
-        //Job parameters
+        //Job configurations
         addParameters {
                 rotator = logRotator(daysToKeepStr: '20', numToKeepStr: '100')
                 parameters = []
                 concurrent = false
         }
 
-        echo "Show environments"
-        echo env.getEnvironment().toString()
+        // Context are mostly from env
+        def final envBranchName = env.'BRANCH_NAME' ?: ''
+        // this is e.g 'master' for a CI build, but 'PR-18' for a PR build
+        def final envTargetBranch = env.'CHANGE_TARGET' ?: ''
+        // This is empty for CI build, but e.g. 'master' for a PR build
+
+        boolean isPR = (envBranchName.startsWith('PR-'))
+
+        baStage("Show ENV") {
+                echo env.getEnvironment().toString()
+                echo binding.variables.toString()
+        }
 
         baStage("Checkout"){
                 echo "Checkout source code..."

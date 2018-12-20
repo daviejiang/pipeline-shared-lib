@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5241cbc9-2b0f-4928-ac3b-447df2310150" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vars/AddParameters.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vars/ciPipeline.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/vars/ciPipeline.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vars/ut.groovy" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,16 +22,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vars/ciPipeline.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+            <state relative-caret-position="437">
+              <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/qa/FileHelper.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="660">
@@ -58,8 +55,8 @@
         <option value="$PROJECT_DIR$/vars/baStage.groovy" />
         <option value="$PROJECT_DIR$/vars/ut.groovy" />
         <option value="$PROJECT_DIR$/vars/AddParameters.groovy" />
-        <option value="$PROJECT_DIR$/vars/ciPipeline.groovy" />
         <option value="$PROJECT_DIR$/src/com/example/qa/FileHelper.groovy" />
+        <option value="$PROJECT_DIR$/vars/ciPipeline.groovy" />
       </list>
     </option>
   </component>
@@ -109,7 +106,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545304584092" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545305777166" />
     <property name="last_opened_file_path" value="D:/work/github/bijie/qa-cicd" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
@@ -212,13 +209,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vars/ciPipeline.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/qa/FileHelper.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -226,6 +216,13 @@
           <folding>
             <element signature="e#24#62#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vars/ciPipeline.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
         </state>
       </provider>
     </entry>
