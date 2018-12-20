@@ -20,7 +20,7 @@ def call(body) {
         }
 
         baStage('Unit tests') {
-                parse()
+                ut.parse()
         }
 
         baStage("Build&Test"){
