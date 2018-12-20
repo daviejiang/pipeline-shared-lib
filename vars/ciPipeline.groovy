@@ -12,6 +12,9 @@ def call(body) {
         body.delegate = config
         body()
 
+        // Job configure
+        properties = []
+
         // Context are mostly from env
         def final envBranchName = env.'BRANCH_NAME' ?: ''
         // this is e.g 'master' for a CI build, but 'PR-18' for a PR build
