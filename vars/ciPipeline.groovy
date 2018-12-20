@@ -14,7 +14,7 @@ def call(body) {
         body()
 
         echo "Show environments"
-        echo env.toString()
+        echo env.getEnvironment().toString()
 
         stage("Checkout"){
                 echo "Checkout source code..."
