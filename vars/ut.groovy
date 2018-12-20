@@ -1,7 +1,7 @@
 
 def parse(){
     echo "parse unit tests"
-    load()
+    this.load()
 }
 
 def load(){
