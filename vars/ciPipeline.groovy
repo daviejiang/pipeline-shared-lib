@@ -12,6 +12,13 @@ def call(body) {
         body.delegate = config
         body()
 
+        //Job parameters
+        addParameters {
+                rotator = logRotator(daysToKeepStr: '20', numToKeepStr: '100')
+                parameters = []
+                concurrent = false
+        }
+
         echo "Show environments"
         echo env.getEnvironment().toString()
 
@@ -20,8 +27,7 @@ def call(body) {
         }
 
         baStage('Unit tests') {
-                ut.parse()
-                this.selftest()
+                echo "Unit tests..."
         }
 
         baStage("Build&Test"){
@@ -30,10 +36,5 @@ def call(body) {
 
         baStage("Publish"){
                 echo "Publish artifacts..."
-                echo FileHelper.hello('Jiang')
         }
-}
-
-def selftest() {
-        echo "this is a selftest"
 }

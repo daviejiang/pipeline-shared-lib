@@ -35,8 +35,4 @@ class FileHelper {
         }
         return children
     }
-
-    static String hello(String name) {
-        return "hello $name"
-    }
 }
