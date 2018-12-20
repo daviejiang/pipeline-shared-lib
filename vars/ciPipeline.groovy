@@ -37,7 +37,7 @@ def call(body) {
                 echo "Git SCM"
                 echo "gitUrl=$gitUrl"
                 echo "component=$component"
-                echo "scmFullComponentName=$scmFullComponentName}
+                echo "scmFullComponentName=$scmFullComponentName"
                 echo "scmOrgName=$scmOrgName"
         }
 
