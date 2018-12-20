@@ -1,5 +1,4 @@
 import com.example.qa.FileHelper
-import hudson.model.Result
 
 /**
  * ci pipeline serves as pre-commit jobs and release jobs
@@ -16,16 +15,16 @@ def call(body) {
         echo "Show environments"
         echo env.getEnvironment().toString()
 
-        stage("Checkout"){
+        baStage("Checkout"){
                 echo "Checkout source code..."
         }
 
-        stage("Build&Test"){
+        baStage("Build&Test"){
                 echo "Build package..."
         }
 
-        stage("Publish"){
+        baStage("Publish"){
                 echo "Publish artifacts..."
-                FileHelper.hello('Jiang')
+                echo FileHelper.hello('Jiang')
         }
 }
