@@ -43,9 +43,11 @@ def call(body) {
 
         baStage("Checkout"){
                 echo "Checkout source code..."
-                dir("${component}") {
-                        retry(1) {
-                                checkout jobScm
+                node('master') {
+                        dir("${component}") {
+                                retry(1) {
+                                        checkout jobScm
+                                }
                         }
                 }
         }
