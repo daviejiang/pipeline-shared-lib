@@ -13,19 +13,18 @@ def call(body) {
         body.delegate = config
         body()
 
-        echo "Show environments"
-        echo env
-
-        stage("Checkout"){
-                echo "Checkout source code..."
+        stage("Deployment"){
+                echo "Deploy to QA..."
         }
 
-        stage("Build&Test"){
-                echo "Build package..."
+        stage("Verify"){
+                echo "Verify..."
         }
 
-        stage("Publish"){
+        stage("Deploy to PROD(grey)"){
                 echo "Publish artifacts..."
-                FileHelper.hello('Jiang')
+                echo FileHelper.hello('Jiang')
         }
+
+        stage("")
 }
