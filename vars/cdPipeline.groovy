@@ -30,6 +30,7 @@ def call(body) {
                 if(cont){
                         echo "User confirmed, but we quit"
                         currentBuild.result = 'ABORTED'
+                        return
                 }
         }
 
