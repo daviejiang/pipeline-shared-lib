@@ -27,7 +27,7 @@ def call(body) {
                                 [$class: 'BooleanParameterDefinition', defaultValue: true, description: '', name: 'Please confirm you agree with this']
                         ])
 
-                if(!cont){
+                if(cont){
                         echo "User confirmed, but we quit"
                         return
                 }
