@@ -60,10 +60,8 @@ def call(body) {
                         dir("${component}") {
                                 retry(1) {
                                         checkout jobScm
-                                        bat '''echo %cd%
-dir
-mvn package
-'''
+                                        def buildscript = libraryResource 'build/build.bat'
+                                        bat buildscript
                                 }
                         }
                 }
