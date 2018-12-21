@@ -2,7 +2,7 @@ import com.example.qa.FileHelper
 import hudson.model.Result
 
 /**
- * ci pipeline serves as pre-commit jobs and release jobs
+ * cd pipeline
  */
 def call(body) {
         final String DISABLED = "DISABLED"
@@ -13,18 +13,25 @@ def call(body) {
         body.delegate = config
         body()
 
-        stage("Deployment"){
+        stage("QA Deployment"){
                 echo "Deploy to QA..."
         }
 
-        stage("Verify"){
-                echo "Verify..."
+        stage("QA Verify"){
+                echo "Verify QA environment..."
+                input "Ready to deploy to Production?"
         }
 
-        stage("Deploy to PROD(grey)"){
+        stage("PROD Deployment(grey)"){
                 echo "Publish artifacts..."
-                echo FileHelper.hello('Jiang')
         }
 
-        stage("")
+        stage("PROD Verify(grey)") {
+                echo "Verify production environment"
+                input "Ready to full deployment?"
+        }
+
+        stage("PROD Deployment(full)") {
+                echo "Deployment to production"
+        }
 }
