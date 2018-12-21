@@ -23,8 +23,7 @@ def call(body) {
                         id: 'Proceed1',
                         message: 'Was this successful?',
                         parameters: [
-                                [$class: 'BooleanParameterDefinition', defaultValue: true, description: '', name: 'Please confirm you agree with this'],
-                                [$class: 'DateParameterDefinition', dateFormat: "'yyyyMMdd'", defaultValue: "LocalDate.now()", name: 'Choose date']
+                                [$class: 'BooleanParameterDefinition', defaultValue: true, description: '', name: 'Please confirm you agree with this']
                         ])
 
                 echo userInput
