@@ -56,6 +56,17 @@ def call(body) {
 
         baStage("Build&Test"){
                 echo "Build package..."
+                node('master') {
+                        dir("${component}") {
+                                retry(1) {
+                                        checkout jobScm
+                                        bat '''echo %cd%
+dir
+mvn package
+'''
+                                }
+                        }
+                }
         }
 
         baStage("Publish"){
