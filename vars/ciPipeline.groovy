@@ -54,10 +54,6 @@ def call(body) {
                 }
         }
 
-        baStage('Unit tests') {
-                echo "Unit tests..."
-        }
-
         baStage("Build&Test"){
                 echo "Build package..."
         }
