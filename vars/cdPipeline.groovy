@@ -19,14 +19,18 @@ def call(body) {
 
         stage("QA Verify"){
                 echo "Verify QA environment..."
-                userInput = input(
+                def cont = input(
                         id: 'Proceed1',
                         message: 'Was this successful?',
+                        ok: 'Submit',
                         parameters: [
                                 [$class: 'BooleanParameterDefinition', defaultValue: true, description: '', name: 'Please confirm you agree with this']
                         ])
 
-                echo userInput.toString()
+                if(!cont){
+                        echo "User confirmed, but we quit"
+                        return
+                }
         }
 
         stage("PROD Deployment(A/B)"){
