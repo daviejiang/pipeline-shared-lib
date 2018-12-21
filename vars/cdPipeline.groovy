@@ -22,16 +22,16 @@ def call(body) {
                 input "Ready to deploy to Production?"
         }
 
-        stage("PROD Deployment(grey)"){
+        stage("PROD Deployment(A/B)"){
                 echo "Publish artifacts..."
         }
 
-        stage("PROD Verify(grey)") {
+        stage("PROD Verify(A/B)") {
                 echo "Verify production environment"
                 input "Ready to full deployment?"
         }
 
-        stage("PROD Deployment(full)") {
+        stage("PROD Deployment") {
                 echo "Deployment to production"
         }
 }
