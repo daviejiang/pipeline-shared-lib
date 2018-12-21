@@ -26,7 +26,7 @@ def call(body) {
                                 [$class: 'BooleanParameterDefinition', defaultValue: true, description: '', name: 'Please confirm you agree with this']
                         ])
 
-                echo userInput
+                echo userInput.toString()
         }
 
         stage("PROD Deployment(A/B)"){
